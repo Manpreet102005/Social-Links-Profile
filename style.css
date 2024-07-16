@@ -66,6 +66,18 @@ body{
 .linkbox:active{
     background-color: hsl(75,94%,57%);
 }
+.linkbox:hover{
+    width: 90%;
+    animation: grow 0.3s ease-in-out 0s ;
+}
+@keyframes grow{
+    from{
+        width: 80%;
+    }
+    to{
+        width: 90%;
+    }
+}
 @media(max-width:1005px){
     .description{
         font-size: 14px;
