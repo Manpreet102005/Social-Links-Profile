@@ -59,10 +59,11 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    padding: 0px;  
 }
 .link{
     text-decoration: none;
-    width:100%;
+    width:220px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -70,10 +71,6 @@ body{
 }
 .linkbox:active{
     background-color: hsl(75,94%,57%);
-}
-.linkbox:hover{
-    width: 90%;
-    animation: grow 0.3s ease-in-out 0s ;
 }
 @keyframes grow{
     from{
@@ -83,7 +80,17 @@ body{
         width: 90%;
     }
 }
-@media(max-width:1005px){
+
+@keyframes shrink{
+    from{
+        width: 90%;
+    }
+    to{
+        width: 80%;
+    }
+}
+
+@media(max-width:768px)and (min-width:375px){
     .description{
         font-size: 14px;
     }
@@ -93,10 +100,23 @@ body{
     .photo{
         width: 20vw;height: 20vw;
     }
+    .linkbox{
+        animation: shrink 0.5s ease-in-out 0s ;
+    }
+    .linkbox:hover{
+        width: 90%;
+        animation: grow 0.5s ease-in-out 0s ;
+    }
 }
 @media(max-width:375px){
     .description{
         font-size: 12px;
+    }
+    .container{
+        width: 80vw;
+    }
+    .photo{
+        width: 20vw;height: 20vw;
     }
 }
 @media(min-width:1440px){
@@ -105,5 +125,12 @@ body{
         height: 40vw;
         font-size: 50px;
     }
+    .linkbox{
+        animation: shrink 0.5s ease-in-out 0s ;
+    }
+    .linkbox:hover{
+        animation: grow 0.5s ease-in-out 0s ;
+    }
+
 }
 
